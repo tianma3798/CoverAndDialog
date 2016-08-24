@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="../../Js/jquery-1.11.1.min.js"></script>
+    <script src="../../Js/Common2.0.js"></script>
+
+    <link href="../../Js/Msg/Msg.css" rel="stylesheet" />
+    <script src="../../Js/Msg/Msg.js"></script>
+
+
+</head>
+<body>
+
+
+    <input type="button" value="显示正在加载" />
+
+    <input type="button" value="显示 登陆成功" />
+
+
+
+
+    <script type="text/javascript">
+        //var msg = new Msg({
+        //    model: false,// 是否显示掩盖层
+        //    hideType:'upfade',
+        //    top:'center'  //设置显示的位置
+        //});
+
+        var msg = new Msg({
+            model: true,// 是否显示掩盖层
+            hideType:'upfade',
+            top:'center'  //设置显示的位置
+        });
+
+
+        //msg.show();
+        //msg.show('正在验证');
+        //msg.show('正在提交正在提交');
+        msg.show();
+
+        setTimeout(function () {
+            msg.showResult('登陆成功');
+        },1000);
+        
+
+        $(':button:first').click(function () {
+            msg.show();
+        });
+
+        $(':button:eq(1)').click(function () {
+            msg.showResult('登陆成功');
+        });
+
+
+    </script>
+
+</body>
+</html>

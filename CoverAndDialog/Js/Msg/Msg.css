@@ -1,0 +1,51 @@
+﻿/***
+    1.进度条 封装1.0样式
+    **/
+
+.msgPanel {
+    position: fixed;
+    width: 100%;
+    height: 0px;
+    z-index: 1000;
+    border: 0px solid red;
+    top: 0px;
+}
+    .msgPanel .msgBack {
+        position:fixed;
+        width:100%;
+        height:100%;
+
+        /*background-color:black;*/
+        background-color:blue;
+        opacity:0.05;
+        filter:alpha(opacity=5);
+        top:0px;
+        left:0px;
+    }
+.msgInner {
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    margin: 0px auto;
+    text-align: center;
+    color: white;
+    background: #3278DC;
+    display: block;
+    font-size: 13px;
+    font-family: '宋体',Arial;
+     padding: 0px 30px;
+}
+
+    .msgInner .loadDiv {
+        position: absolute;
+       
+        left:0px;
+        top:0px;
+        width:100%;
+    }
+
+    .msgInner .loading {
+        position: absolute;
+
+    }

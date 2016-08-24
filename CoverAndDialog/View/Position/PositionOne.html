@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+
+    <style type="text/css">
+        #fixedOuter {
+            background-color: gray;
+            position: fixed;
+            width: 200px;
+            height: 200px;
+        }
+
+        #fixedInner {
+            position: fixed;
+            top: 50px;
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+
+    <!--<script src="../../Js/jquery-1.8.2.js"></script>-->
+    <!--<script src="../../Js/jquery-1.9.0.js"></script>-->
+
+    <script src="../../Js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            /**jquery 对于fixed 定位元素的position() 获取位置测处理***/
+            /*
+            * 1.8.2 对应的版本 position().top 获取的结果是相对于document  的位置
+            */
+
+            /*
+            * 1.9.0及以上版本 对应的版本 position().top 获取的结果是相对于父元素  的位置
+            */
+            $(document).mousemove(function () {
+                var fixedInner = $("#fixedInner");
+                $("#left").text(fixedInner.position().left);
+                $("#top").text(fixedInner.position().top);
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <div id="fixedOuter">
+        <div id="fixedInner">
+            jquery的position().left:<span id="left" style="font-weight:bold;color:blue;"></span>
+            <br />
+            jquyer的position().top:<span id="top" style="font-weight:bold;color:blue;"></span>
+        </div>
+    </div>
+
+
+    <div style="width:300px;height:100px; background-color:red;opacity:0.8;position:absolute;"></div>
+    <div style="height:500px;background-color:#ffffff;">asdfsadf</div>
+    <div style="height: 500px; background-color: #00ffff; position:relative">
+        asdfsadf
+        asdfsadf<br />
+        asdfsadf<br />
+        asdfsadf<br />
+        asdfsadf<br />
+        asdfsadf<br />v
+        asdfsadf<br />
+        asdfsadf<br />
+        asdfsadf<br />
+        asdfsadf<br />
+        asdfsadf<br />
+        asdfsadf<br />
+    </div>
+
+
+</body>
+</html>

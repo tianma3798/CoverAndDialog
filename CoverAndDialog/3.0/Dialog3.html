@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="../../Css/CommonCss1.0.css" rel="stylesheet" />
+    <script src="../Js/Common2.0.js"></script>
+    <script src="../Js/jquery-1.11.1.min.js"></script>
+    <link href="../Js/Cover3.0/Cover3.0.css" rel="stylesheet" />
+    <script src="../Js/Cover3.0/Cover3.0.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+
+
+            $.dialog({
+                resizeSite: true,
+                clickDestroy:false,
+                width: 500,
+                height: 400,
+                top:0,
+                showIcon: true,
+                content: '<div style="background:gray;height:800px;">aaaaaaaaaaaaaaaa</div>',
+                onOpen: function (elem) {
+                    alert(elem.html());
+                },
+                onDestroy: function () {
+                    console.info('已经销毁');
+                }
+              
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

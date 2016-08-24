@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="../../Css/CommonCss1.0.css" rel="stylesheet" />
+    <script src="../Js/Common2.0.js"></script>
+    <script src="../Js/jquery-1.11.1.min.js"></script>
+    <link href="../Js/Cover3.0/Cover3.0.css" rel="stylesheet" />
+    <script src="../Js/Cover3.0/Cover3.0.js"></script>
+    <script>
+        $(function () {
+            $.cover({
+                onOpen: function (elem) {
+                    console.info(elem);
+                    alert(elem.html());
+                },
+                onDestroy: function () {
+                    console.info('已经销毁');
+                }
+            });
+        });
+     
+
+        //var cover = $.cover({
+        //    width: 500,
+        //    height: 300,
+        //    autoDestroy: false,//是否自动消失
+        //    clickDestroy: true,//点击消失
+        //    destroyType: 'slideUp',//消失方式
+        //    scrollHide: false,    //禁止隐藏滚动条
+        //    html: '<div style="font-size:40px;color:green;background-color:#00ffff;">中文内容asdfsadf中文内容asdfsadf中文内容asdfsadf</div>'
+        //});
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="../../Css/CommonCss1.0.css" rel="stylesheet" />
+    <script src="../../Js/jquery-1.9.0.js"></script>
+    <!--<script src="../../Js/jquery-1.8.2.js"></script>-->
+
+    <script src="../../Js/Common2.0.js"></script>
+    <script src="../../Js/Cover2.0/Cover2.0.js"></script>
+    <link href="../../Js/Cover2.0/Cover2.0.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+        $(function () {
+            //全默认
+            //$.cover();
+
+
+            //禁用点击自动消失
+            //$.cover({
+            //    clickDestroy: false
+            //});
+
+
+            //设置 显示后自动消失
+            //$.cover({
+            //    autoDestroy:true
+            //});
+
+
+            ////设置弹出层内容
+            //$.cover({
+            //    autoDestroy: false,//是否自动消失
+            //    clickDestroy: true,//点击消失
+            //    destroyType: 'slideUp',//消失方式
+            //    scrollHide: false,    //禁止隐藏滚动条
+            //    html: '<div style="font-size:40px;color:green;background-color:#00ffff;">中文内容asdfsadf中文内容asdfsadf中文内容asdfsadf</div>'
+            //});
+
+            //设置弹出层内容,设定宽度和高度
+            $.cover({
+                width: 500,
+                height: 300,
+                autoDestroy: false,//是否自动消失
+                clickDestroy: true,//点击消失
+                destroyType: 'slideUp',//消失方式
+                scrollHide: false,    //禁止隐藏滚动条
+                html: '<div style="font-size:40px;color:green;background-color:#00ffff;">中文内容asdfsadf中文内容asdfsadf中文内容asdfsadf</div>'
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+    <div style="height:500px;background-color:#ffffff;">asdfsadf</div>
+    <div style="height: 500px; background-color: #00ffff;">
+        asdfsadf
+        asdfsadf<br />
+        asdfsadf<br />
+        asdfsadf<br />
+        asdfsadf<br />
+        asdfsadf<br />v
+        asdfsadf<br />
+        asdfsadf<br />
+        asdfsadf<br />
+        asdfsadf<br />
+        asdfsadf<br />
+        asdfsadf<br />
+    </div>
+</body>
+</html>
